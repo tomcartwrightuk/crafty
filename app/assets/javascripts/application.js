@@ -14,6 +14,5 @@
 //= require jquery_ujs
 //= require ./lib/angular.js
 //= require ./lib/angular-route.js
-//= require ./lib/masonry.pkgd.js
 //= require ./lib/bootstrap.js
 //= require_tree ./app
