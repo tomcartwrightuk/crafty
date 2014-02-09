@@ -15,4 +15,5 @@ angular.module('craftyApp.controllers', []).
       {name: "Pale Ale Centennial", brewery: "Kernel", score: 3, review: "Slightly sour tasting for my taste"},
       {name: "Ink Stout", brewery: "Camden Town", score: 4, review: "A smooth stout with a medium body"}
     ]
+    $scope.newReview = {}
   }])
