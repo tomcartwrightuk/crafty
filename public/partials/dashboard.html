@@ -1,5 +1,14 @@
 <h1>{{title}}</h1>
 
-<ul ng-repeat="photo in photos" class="list-unstyled photo-list">
-  <li class="item"><img src="{{photo.url}}"></img></li>
-</ul>
+<div ng-repeat="review in reviews" class="review-list">
+  <section class="item">
+    <header>
+      <h2>{{review.name}}</h2>
+    </header>
+    <ul class="list-unstyled">
+      <li>{{review.brewery}}</li>
+      <li>{{review.review}}</li>
+      <li>{{review.score}}</li>
+    </ul>
+  </section>
+</div>

@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Floader::Application.load_tasks
+Crafty::Application.load_tasks

@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Floader::Application.config.secret_key_base = '34c88083305dc3e1771967085410e8c6acbd41187ac3bb2a2587e908abc60930ed9c15a3b3c8b7b27b439fa94958652b07a186405693aa5c4a82b6eb7413e10e'
+Crafty::Application.config.secret_key_base = '34c88083305dc3e1771967085410e8c6acbd41187ac3bb2a2587e908abc60930ed9c15a3b3c8b7b27b439fa94958652b07a186405693aa5c4a82b6eb7413e10e'
