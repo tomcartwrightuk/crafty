@@ -1,49 +1,37 @@
 <h1>{{title}}</h1>
 
-<div ng-repeat="review in reviews" class="review-list">
-  <section class="review-section score-{{review.score}}">
-    <header>
-      <h2>{{review.name}}</h2>
-    </header>
-    <ul class="list-unstyled">
-      <li>{{review.brewery}}</li>
-      <li>{{review.review}}</li>
-      <li>{{review.score}} out of 5</li>
-    </ul>
-  </section>
+<h2>Reviews:</h2>
+<div ng-repeat="review in reviews" class="review-list panel panel-default">
+  <!-- <section class="review-section score-{{review.score}}"> -->
+  <div class="panel-heading score-{{review.score}}">
+    {{review.name}}
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">Brewery: {{review.brewery}}</li>
+    <li class="list-group-item">Thoughts: {{review.review}}</li>
+    <li class="list-group-item">Score: {{review.score}} out of 5</li>
+  </ul>
 </div>
 
-<form class="form-inline formWithDatePicker row" role="form" ng-submit="actionBooking()">
-  <div class="form-group col-lg-12">
-    <div>
-      <label class="col-lg-12 control-label">Beer</label>
-      <input type="text" class="col-lg-12" ng-model="newReview.name" ng-required="true" />
-    </div>
-    <div>
-      <label class="col-lg-12 control-label">Brewery</label>
-      <input type="text" class="col-lg-12" ng-model="newReview.brewery" ng-required="true" />
-    </div>
-    <div>
-      <label class="col-lg-12 control-label">Review</label>
-      <input type="text" class="col-lg-12" ng-model="newReview.review" ng-required="true" />
-    </div>
-    <div>
-      <label class="col-lg-12 control-label">Score</label>
-      <input type="number" class="col-lg-12" ng-model="newReview.score" ng-required="true"  min="1" max="5"/>
-    </div>
+<form class="review-form" role="form" ng-submit="createReview(newReview)">
+  <div class="form-group">
+    <input type="text" class=" form-control" ng-model="newReview.name" ng-required="true" placeholder="Beer name" />
+    <input type="text" class="form-control" ng-model="newReview.brewery" ng-required="true" placeholder="Brewery name" />
+    <input type="text" class="form-control" ng-model="newReview.review" ng-required="true" placeholder="A few thoughts" />
+    <input type="number" class="form-control score-input" ng-model="newReview.score" ng-required="true"  min="1" max="5" placeholder="Score out of 5"/>
+    <button type="submit" class="btn btn-primary right-float">Save</button>
   </div>
 </form>
 
 <h2>Review preview</h2>
-<div class="review-list">
-  <section class="review-section score-{{review.score}}">
-    <header>
-      <h2>{{newReview.name}}</h2>
-    </header>
-    <ul class="list-unstyled">
-      <li>{{newReview.brewery}}</li>
-      <li>{{newReview.review}}</li>
-      <li>{{newReview.scoreText}}</li>
-    </ul>
-  </section>
+<div class="review-list panel panel-default">
+  <!-- <section class="review-section score-{{review.score}}"> -->
+  <div class="panel-heading score-{{review.score}}">
+    {{newReview.name}}
+  </div>
+  <ul class="list-group">
+    <li class="list-group-item">Brewery: {{newReview.brewery}}</li>
+    <li class="list-group-item">Thoughts: {{newReview.review}}</li>
+    <li class="list-group-item">Score: {{newReview.score}} out of 5</li>
+  </ul>
 </div>

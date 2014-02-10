@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require ./lib/angular.js
 //= require ./lib/angular-route.js
+//= require ./lib/angular-resource.js
 //= require ./lib/bootstrap.js
+//= require ng-rails-csrf
 //= require_tree ./app

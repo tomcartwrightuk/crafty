@@ -1,7 +1,37 @@
 .page-body {
   margin-top: 50px;
 }
+.review-list {
+  width: 400px;
+  h3 {
+    margin-top: 5px;
+  }
+  header {
+    padding-top: 5px;
+    padding-left: 5px;
+  }
+}
 
 .score-5 {
-  background-color: #E9E2A7;
+  background-color: #E9E2A7 !important;
+  background-image: none !important;
+}
+
+.float-right {
+  float: right;
+}
+
+.review-form {
+  margin-top: 40px;
+}
+.form-group {
+  width: 400px;
+  margin-top: 20px;
+  input, button {
+    margin-top: 10px;
+  }
+  .score-input {
+    width: 250px;
+  }
+
 }
