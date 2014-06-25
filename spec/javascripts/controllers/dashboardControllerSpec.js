@@ -10,7 +10,8 @@ describe('DashboardController', function() {
     createController = function(mockReview) {
       return $controller('DashboardController', {
         '$scope': $scope,
-        'Review': mockReview
+        'Review': mockReview,
+        'reviews': []
       });
     };
 
@@ -41,7 +42,7 @@ describe('DashboardController', function() {
     }
     var controller = createController(mockFailedReview);
     $scope.createReview({name: "BeerSpec", brewery: "Jamsine", review: "Angular aftertaste", score: 12})
-    expect($scope.reviews.length).toBe(3)
+    expect($scope.reviews.length).toBe(0)
     expect($scope.errMsg).toBe("Score must be a number between 1 and 5");
   });
 

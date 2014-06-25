@@ -17,6 +17,8 @@ src_files:
   - app/assets/javascripts/lib/angular-resource.js
   - app/assets/javascripts/lib/angular-resource.js
   - app/assets/javascripts/app/app.js
+  - app/assets/javascripts/app/resources.js
+  - app/assets/javascripts/app/controllers.js
   - spec/javascripts/angular-mocks.js
 
 # stylesheets

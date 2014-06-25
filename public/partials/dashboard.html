@@ -1,6 +1,11 @@
 <h1>{{title}}</h1>
 
 <h2>Reviews:</h2>
+
+<div ng-show="displayMsg" class="well well-lg">
+  You have not added any reviews yet. Why not review that beer you are holding?
+</div>
+
 <div ng-repeat="review in reviews" class="review-list panel panel-default">
   <!-- <section class="review-section score-{{review.score}}"> -->
   <div class="panel-heading score-{{review.score}}">
@@ -13,6 +18,8 @@
   </ul>
 </div>
 
+
+<h2>New review</h2>
 <form class="review-form" role="form" ng-submit="createReview(newReview)">
   <div class="form-group">
     <input type="text" class=" form-control" ng-model="newReview.name" ng-required="true" placeholder="Beer name" />
